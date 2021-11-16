@@ -15,11 +15,12 @@ app.use(morgan("dev"));
 
 app.use("/todos", todoRouter)
 
-
-// const appMiddleware = (req,res,next)=>{
-//   console.log("todos");
-//   next();
-// }
+//?
+const appMiddleware = (req,res,next)=>{
+  console.log("todos");
+  next();
+}
+//
 const todoMiddleware = (req, res, next) => {
   console.log("todos");
   next();

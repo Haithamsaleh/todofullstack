@@ -2,6 +2,9 @@ const express=require("express");
 const{
     getAllTodos,
     getDoneTodo,
+    createNewTodo,
+    updateTodoDes,
+    deletTodo,
 }= require("./../controllers/todosControllers");
 
 const getAllTodosMiddleware = (req,res,next)=>{
@@ -12,6 +15,12 @@ const todoRouter= express.Router();
 
 todoRouter.get("/",getAllTodosMiddleware, getAllTodos);
 todoRouter.get("/done", getDoneTodo);
+todoRouter.post("/", createNewTodo);
+todoRouter.put("/:id", updateTodoDes);
+todoRouter.delete("/:id", deletTodo);
+
+
+
 
 
 module.exports = todoRouter;
