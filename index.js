@@ -6,7 +6,9 @@ const { application } = require("express");
 const app = express();
 
 
-
+app.get("/todo",(req,res)=>{
+    res.status(200).json(todo)
+})
 
 
 
