@@ -17,7 +17,7 @@ const getDoneTodo = (req, res) => {
 };
 const createNewTodo = (req, res) => {
     const todo = {
-      id: tdos.length + 1,
+      id: todos.length + 1,
       task: req.body.task,
       done: false,
     };

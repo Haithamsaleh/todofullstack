@@ -13,9 +13,9 @@ const getAllTodosMiddleware = (req,res,next)=>{
 };
 const todoRouter= express.Router();
 
-todoRouter.get("/",getAllTodosMiddleware, getAllTodos);
+todoRouter.get("/todos",getAllTodosMiddleware, getAllTodos);
 todoRouter.get("/done", getDoneTodo);
-todoRouter.post("/", createNewTodo);
+todoRouter.post("/todos", createNewTodo);
 todoRouter.put("/:id", updateTodoDes);
 todoRouter.delete("/:id", deletTodo);
 
